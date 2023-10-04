@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reddit Video Downloader</title>
+</head>
+<body>
+    <h1>Reddit Video Downloader</h1>
+    <form method="post">
+        <label for="giveurl">Enter Reddit Video URL:</label>
+        <input type="text" id="giveurl" name="giveurl" required>
+        <button type="submit">Download</button>
+    </form>
+
+    {% if output_filename %}
+    <p>Video downloaded successfully!</p>
+    <a href="{{ url_for('download', filename=output_filename) }}">Download Your Video</a>
+    {% endif %}
+
+</body>
+</html>
